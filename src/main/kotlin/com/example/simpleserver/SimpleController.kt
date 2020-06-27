@@ -17,8 +17,23 @@ class SimpleController {
         return "nextPage"
     }
     @RequestMapping("linearEquation")
-    fun getEquationValue(@RequestParam("x") x:Double):Double{
+    fun getEquationValue(
+            @RequestParam("a",defaultValue = "10") a:Double,
+            @RequestParam("b",defaultValue = "2") b:Double,
+            @RequestParam("x",defaultValue = "0") x:Double):Double{
         //y=10*x+2
-        return 10*x+2;
+        return a*x+b
+    }
+    @RequestMapping("add")
+    fun add(x: Double, y: Double):Double{
+        return x+y
+    }
+    @RequestMapping("squareEquation")
+    fun getSquareEquationValue(
+            @RequestParam("a",defaultValue = "10") a:Double,
+            @RequestParam("b",defaultValue = "2") b:Double,
+            @RequestParam("x",defaultValue = "0") x:Double):Double{
+        //y=10*x+2
+        return a*x+b
     }
 }
