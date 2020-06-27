@@ -5,11 +5,14 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.ResponseBody
 import org.springframework.web.bind.annotation.RestController
 
-@Controller
+@RestController
 class SimpleController {
     @RequestMapping("")
-    @ResponseBody
     fun getInfo():String{
         return "info"
+    }
+    @RequestMapping("next")
+    fun getNextPage():String{
+        return "nextPage"
     }
 }
