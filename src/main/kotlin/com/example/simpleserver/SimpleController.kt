@@ -15,4 +15,8 @@ class SimpleController {
     fun getNextPage():String{
         return "nextPage"
     }
+    @RequestMapping("linearEquation")
+    fun getEquationValue():Double{
+        return 10.0
+    }
 }
