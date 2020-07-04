@@ -36,4 +36,10 @@ class SimpleController {
         //y=10*x+2
         return a*x+b
     }
+    @RequestMapping("linearEquation1")
+    fun getEquationData():IntArray{
+        //y=10*x+2
+        val data = intArrayOf(1,2,3,4,5,6,7,8,9,10)
+        return data
+    }
 }
